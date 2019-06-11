@@ -1,0 +1,6 @@
+framework module Pods_PetsDexTests {
+  umbrella header "Pods-PetsDexTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

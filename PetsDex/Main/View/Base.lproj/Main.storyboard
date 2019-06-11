@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="PetsDex" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="480x800-drr8" translatesAutoresizingMaskIntoConstraints="NO" id="VdX-gc-F0T">
+                                <rect key="frame" x="-69" y="368" width="552" height="368"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="VdX-gc-F0T" secondAttribute="height" multiplier="3:2" id="1uy-uy-7eQ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Petz Dex" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8RA-qx-3Ow">
+                                <rect key="frame" x="16" y="66" width="374" height="33"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWQ-zp-neM">
+                                <rect key="frame" x="127" y="149" width="160" height="41"/>
+                                <color key="backgroundColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="aR2-xf-QbS"/>
+                                    <constraint firstAttribute="height" constant="41" id="dvs-dR-TzU"/>
+                                </constraints>
+                                <state key="normal" title="Cats">
+                                    <color key="titleColor" red="0.99612313509999995" green="0.99998599290000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionCats:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HCg-Az-e3f"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zIR-E6-3wq">
+                                <rect key="frame" x="127" y="212" width="160" height="41"/>
+                                <color key="backgroundColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="9wR-kh-ear"/>
+                                    <constraint firstAttribute="height" constant="41" id="Wzd-Zl-NZb"/>
+                                </constraints>
+                                <state key="normal" title="Dogs">
+                                    <color key="titleColor" red="0.99612313509999995" green="0.99998599290000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionDogs:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hsI-MB-OuL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vWQ-zp-neM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="A3o-X1-mab"/>
+                            <constraint firstItem="zIR-E6-3wq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AAe-tO-La9"/>
+                            <constraint firstItem="VdX-gc-F0T" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="Dtx-gz-Otb"/>
+                            <constraint firstItem="VdX-gc-F0T" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="F5a-aj-8CW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8RA-qx-3Ow" secondAttribute="trailing" constant="24" id="F6Z-ph-nzF"/>
+                            <constraint firstItem="VdX-gc-F0T" firstAttribute="centerX" secondItem="zIR-E6-3wq" secondAttribute="centerX" id="PUw-LM-O9Q"/>
+                            <constraint firstItem="zIR-E6-3wq" firstAttribute="top" secondItem="vWQ-zp-neM" secondAttribute="bottom" constant="22" id="YBq-H1-zHh"/>
+                            <constraint firstItem="8RA-qx-3Ow" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="46" id="csn-Jm-2AN"/>
+                            <constraint firstItem="vWQ-zp-neM" firstAttribute="top" secondItem="8RA-qx-3Ow" secondAttribute="bottom" constant="50" id="fG2-VY-jGT"/>
+                            <constraint firstItem="8RA-qx-3Ow" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="n8Q-Hf-1c6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnCats" destination="vWQ-zp-neM" id="EDi-Bz-Ku4"/>
+                        <outlet property="btnDogs" destination="zIR-E6-3wq" id="kCF-ey-YPW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="39.375" y="25"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="480x800-drr8" width="360" height="600"/>
+    </resources>
+</document>
