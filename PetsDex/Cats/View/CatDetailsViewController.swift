@@ -13,15 +13,6 @@ class CatDetailsViewController: UIViewController {
     var imageCat = UIImageView()
     
     var navBar : UINavigationBar!
-    var labelTitle: UILabel!
-    var labelLife: UILabel!
-    var textLife: UILabel!
-    var labelOrigin: UILabel!
-    var textOrigin: UILabel!
-    var labelTemperament: UILabel!
-    var textTemperament: UILabel!
-    var labelDescription: UILabel!
-    var textDescription: UILabel!
     
     var cat: Cat!
     var catDetail = [CatDetail]()
@@ -45,6 +36,7 @@ class CatDetailsViewController: UIViewController {
                 self.showAlert(title, message)
             }
             self.setImage()
+            self.setInformation()
         }
     }
     
@@ -78,7 +70,8 @@ class CatDetailsViewController: UIViewController {
     }
     
     func setImage(){
-        imageCat = UIImageView(frame: CGRect(x: 10, y: navBar.frame.height, width: 300, height: 300))
+        imageCat = UIImageView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
+        imageCat.center = CGPoint(x: myView.center.x, y: 200)
         imageCat.contentMode = .scaleToFill
         
         let url = URL(string: catDetail[0].url)
@@ -90,6 +83,34 @@ class CatDetailsViewController: UIViewController {
         //setConstraits()
     }
     
+    func setInformation(){
+        let height = imageCat.frame.size.height + 150
+        let lifeText = "Life: \(String(describing: cat.life_span!)) years"
+        let originText = "Origin: \(String(describing: cat.origin!))"
+        let temperamentText = "Temperament: \(String(describing: cat.temperament!))"
+        let descriptionText = "Description: \(String(describing: cat.description!))"
+
+        let labelLife = createLabel(lifeText, height)
+        let labelOrigin = createLabel(originText, height + 25)
+        let labelTemperament = createLabel(temperamentText, height + 60)
+        let labelDescription = createLabel(descriptionText, height + 130)
+
+        myView.addSubview(labelLife)
+        myView.addSubview(labelOrigin)
+        myView.addSubview(labelTemperament)
+        myView.addSubview(labelDescription)
+    }
+
+    func createLabel(_ text: String, _ height: CGFloat) -> UILabel{
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 500))
+        label.center = CGPoint(x: myView.center.x, y: height)
+        label.textAlignment = .center
+        label.text = text
+        label.numberOfLines = 0
+        label.lineBreakMode = NSLineBreakMode.byWordWrapping
+        
+        return label
+    }
     
     // MARK :- Constraints
     
